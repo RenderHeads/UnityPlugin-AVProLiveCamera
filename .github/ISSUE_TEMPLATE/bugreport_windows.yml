@@ -1,0 +1,88 @@
+name: Bug Report
+description: "File a bug report"
+title: "[Bug] "
+labels: ["bug", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this bug report.
+  - type: markdown
+    attributes:
+      value: "## Please do not link to or attach project files here!"
+  - type: markdown
+    attributes:
+      value: Instead please send a link via email to [unitysupprt@renderheads.com](mailto:unitysupport@renderheads.com) quoting this issue in your email's subject (i.e. '[Windows] Something isn't quite right \#1234') and providing a link to the issue in your message.
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      description: The specific version of the Unity editor you are using.
+      placeholder: "e.g. 2021.3.27f1"
+    validations:
+      required: true
+  - type: dropdown
+    id: avprolivecamera-edition
+    attributes:
+      label: AVPro Live Camera edition
+      options:
+        - Trial
+        - Full
+    validations:
+      required: true
+  - type: input
+    id: avprolivecamera-version
+    attributes:
+      label: AVPro Live Camera Version
+      description: The version of the AVPro Live Camera plugin you are using.
+      placeholder: "e.g. 2.9.3"
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: Which Windows version(s) are you using?
+      description: Please provide the version of Windows you're reporting this issue for.
+      placeholder: "e.g. Windows 10"
+    validations:
+      required: true
+  - type: dropdown
+    id: graphics-apis
+    attributes:
+      label: Which graphics API(s) are you using?
+      options:
+        - Direct3D 11
+        - Direct3D 12
+      multiple: true
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware/Webcam model
+      description: Please provide details of the hardware and/or Webcam name/model number you're using.
+    validations:
+      required: true
+  - type: textarea
+    id: video-mode
+    attributes:
+      label: Video mode
+      description: "Please provide the details of the video mode you are using, to including: resolution, frame rate, and colour mode."
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: The issue
+      description: Please describe the issue, how to reproduce it and what you expected the outcome to be.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Please provide any relevant log output here.
+      render: shell
+    validations:
+      required: false

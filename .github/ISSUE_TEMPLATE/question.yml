@@ -1,0 +1,36 @@
+name: Question
+description: "Ask a question"
+title: "[Question] "
+labels: ["question", "triage"]
+assignees:
+  - Chris-RH
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filling out this question form!
+  - type: dropdown
+    id: avprolivecamera-edition
+    attributes:
+      label: AVPro Live Camera edition
+      options:
+        - Trial
+        - Full
+    validations:
+      required: false
+  - type: input
+    id: avprolivecamera-version
+    attributes:
+      label: AVPro Live Camera Version
+      description: The version of the AVPro Live Camera plugin your question is about.
+      placeholder: "e.g. 2.9.3"
+    validations:
+      required: false
+  - type: textarea
+    id: request
+    attributes:
+      label: Your question
+      description: Ask your question here
+      placeholder: How do I...
+    validations:
+      required: true
